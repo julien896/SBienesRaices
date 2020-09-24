@@ -1,3 +1,5 @@
+/* //Parallax efecto */
+
 .parallax-container {
     width:100%;
 }
@@ -6,22 +8,13 @@
 
 }
 
-
+/* inputs */
 #d1,#d2,#d3{
   padding-top: 30px;
   margin-top: 30px;
 }
-#prop1{
-  font-family: "Roboto", sans-serif; color:white;
-  font-size: 17px;
-}
-#divprop1{
-  padding-top:30px;
-  margin-top:30px;
-}
 
-
-#d4{ margin-top:20px;}#email{
+#email{
   font-family: "Roboto", sans-serif;
   color: white; 
 }
@@ -42,6 +35,21 @@
   font-family: "Roboto", sans-serif;
   color: white; 
 }
+
+
+#prop1{
+  font-family: "Roboto", sans-serif; color:white;
+  font-size: 17px;
+}
+#divprop1{
+  padding-top:30px;
+  margin-top:30px;
+}
+
+
+#d4{ margin-top:20px;}
+
+
 .fon{
   background-image: url('/contacto.jpg');
   background-size:cover; height:900px; 
@@ -68,9 +76,11 @@ width:100%;
 height:110px;
 align-items: center;
 text-align: center;
-} .container{font-family: "Roboto", sans-serif;
+} 
+.container{font-family: "Roboto", sans-serif;
   color: #212121;  }
-#mail{
+
+  #mail{
 width:15px;
 height:15px;
 margin-right:2px;
@@ -78,6 +88,7 @@ margin-left:15px;
 padding-top:2px;
 border:0%;
 }
+
 #ma{
 width:15px;
 height:15px;
@@ -86,6 +97,7 @@ margin-left:15px;
 padding-top:2px;
 border:0%;
 }
+
 #m{
 width:16px;
 height:16px;
@@ -93,7 +105,8 @@ margin-right:2px;
 padding-top:2px;
 border:0%;
 }
- .container3{
+
+.container3{
   background-image:url('/nature.jpg'); 
   background-size:cover; height:3700px; 
 }
@@ -109,7 +122,9 @@ h6{
 width:500px !important;
 
 }
-
+#foto{
+  border-radius: 3%;
+}
 .carousel{
   height: 550px;
   padding-bottom:0px;
@@ -134,4 +149,12 @@ footer{
 }
 #foo1{
   height: 18px; text-align:center; font-family: "Roboto", sans-serif;
-} #z{ color : black; margin-left:270px;} .chip {margin-top:350px;} #x{ color : black; margin-right:320px;}#v{ color : black;margin-left:40px; } #o{ color : black;}
+} 
+
+/* contact */
+
+#z{ color : black; margin-left:270px;} 
+.chip {margin-top:350px;} 
+#x{ color : black; margin-right:320px;}
+#v{ color : black;margin-left:40px; } 
+#o{ color : black;}

@@ -23,11 +23,11 @@ const Propiedades = () => {
                         Una verdadera oportunidad para emprendimientos
                         Precio de venta : USD 50.000 (dólares)</p>
                         <div class="carousel">
-                            <a class="carousel-item" href="#one!"><img src="a.jpg"/></a>
-                            <a class="carousel-item" href="#two!"><img src="a1.jpg"/></a>
-                            <a class="carousel-item" href="#three!"><img src="a2.jpg"/></a>
-                            <a class="carousel-item" href="#four!"><img src="a3.jpg"/></a>
-		                    <a class="carousel-item" href="#five!"><img src="a4.jpg"/></a>
+                            <a class="carousel-item" href="#one!"><img id="foto" alt="propiedad" src="a.jpg"/></a>
+                            <a class="carousel-item" href="#two!"><img id="foto" alt="propiedad" src="a1.jpg"/></a>
+                            <a class="carousel-item" href="#three!"><img id="foto" alt="propiedad" src="a2.jpg"/></a>
+                            <a class="carousel-item" href="#four!"><img id="foto" alt="propiedad" src="a3.jpg"/></a>
+		                    <a class="carousel-item" href="#five!"><img id="foto" alt="propiedad" src="a4.jpg"/></a>
                         </div>
         </div >   
         <div id="divprop1" className = "propiedad2 col s12">
@@ -35,10 +35,10 @@ const Propiedades = () => {
            <p id="prop1">Cuatro hectáreas parquizadas, con arboledas y vertientes naturales. Cada cabaña cuenta con 3 habitaciones, 1 baño ,cocheras y asadores individuales, salamandras de doble combustión y hogar a leña.
                         Precio: $18.000 p/mes más expensas. Se requiere garantia propietaria y mes de anticipo</p>
                         <div class="carousel">
-                            <a class="carousel-item" href="#one!"><img src="b1.jpg"/></a>
-                            <a class="carousel-item" href="#two!"><img src="b2.jpg"/></a>
-                            <a class="carousel-item" href="#three!"><img src="b3.jpg"/></a>
-		                    <a class="carousel-item" href="#four!"><img src="b4.jpg"/></a>
+                            <a class="carousel-item" href="#one!"><img id="foto" alt="propiedad" src="b1.jpg"/></a>
+                            <a class="carousel-item" href="#two!"><img id="foto" alt="propiedad" src="b2.jpg"/></a>
+                            <a class="carousel-item" href="#three!"><img id="foto" alt="propiedad" src="b3.jpg"/></a>
+		                    <a class="carousel-item" href="#four!"><img id="foto" alt="propiedad" src="b4.jpg"/></a>
                         </div>
         </div >   
         
@@ -50,9 +50,9 @@ const Propiedades = () => {
                         Totalmente forestado con añosos árboles en su mayoria autóctonos como algarrobos, chañares, piquillín, cactus, etc. Execelte vista a las sierras. A 2,5 km de la ruta.
                         Precio: 80.000u$s/ La Mitad 45.000.000 U$s</p>
                         <div class="carousel">
-                            <a class="carousel-item" href="#one!"><img src="d.jpg"/></a>
-                            <a class="carousel-item" href="#two!"><img src="d1.jpg"/></a>
-                            <a class="carousel-item" href="#three!"><img src="d2.jpg"/></a>
+                            <a class="carousel-item" href="#one!"><img id="foto" alt="propiedad" src="d.jpg"/></a>
+                            <a class="carousel-item" href="#two!"><img id="foto" alt="propiedad" src="d1.jpg"/></a>
+                            <a class="carousel-item" href="#three!"><img alt="propiedad" id="foto" src="d2.jpg"/></a>
                         </div>
         </div > 
         <div id="divprop1" className = "propiedad5 col s12">
@@ -63,10 +63,10 @@ const Propiedades = () => {
                         Ideal para inversión.
                         Líneas de transportes públicos a 1 cuadra</p>
                         <div class="carousel">
-                            <a class="carousel-item" href="#one!"><img src="e.jpg"/></a>
-                            <a class="carousel-item" href="#two!"><img src="e1.jpg"/></a>
-                            <a class="carousel-item" href="#three!"><img src="e3.jpg"/></a>
-                            <a class="carousel-item" href="#three!"><img src="e4.jpg"/></a>
+                            <a class="carousel-item" href="#one!"><img id="foto" alt="propiedad" src="e.jpg"/></a>
+                            <a class="carousel-item" href="#two!"><img id="foto" alt="propiedad" src="e1.jpg"/></a>
+                            <a class="carousel-item" href="#three!"><img id="foto" alt="propiedad" src="e3.jpg"/></a>
+                            <a class="carousel-item" href="#three!"><img id="foto" alt="propiedad" src="e4.jpg"/></a>
                         </div>
         </div > 
         <div id="divprop1" className = "propiedad3 col s12">
@@ -75,9 +75,9 @@ const Propiedades = () => {
            <p id="prop1">
                         LOTES DE 2.500 MTS2 Y DE 5.060 MTS2. OTRO DE 5.100 CON CASA A TERMINAR. PRECIO POR MTS2 U$ 12.- TÍTULOS AL DÍA</p>
                         <div class="carousel">
-                            <a class="carousel-item" href="#one!"><img src="c.jpg"/></a>
-                            <a class="carousel-item" href="#two!"><img src="c1.jpg"/></a>
-                            <a class="carousel-item" href="#three!"><img src="c2.jpg"/></a>
+                            <a class="carousel-item" href="#one!"><img id="foto" alt="propiedad" src="c.jpg"/></a>
+                            <a class="carousel-item" href="#two!"><img id="foto" alt="propiedad" src="c1.jpg"/></a>
+                            <a class="carousel-item" href="#three!"><img id="foto" alt="propiedad" src="c2.jpg"/></a>
                         </div>
         </div > 
     </div >

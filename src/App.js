@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter ,Route,Router, Switch} from 'react-router-dom';
+import {BrowserRouter , Route, Switch } from 'react-router-dom';
 import Contacto from './components/Contacto';
 import Propiedades from './components/Propiedades';
 import Principal from './components/Principal';
@@ -21,4 +21,4 @@ function App() {
 export default App;
 
 
-
+//

@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import M from 'materialize-css'
+import 'materialize-css'
 
 const Footer = () => {
     return ( 

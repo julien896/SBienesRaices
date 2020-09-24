@@ -1,7 +1,7 @@
 import React from 'react';
-import M from 'materialize-css';
-import {BrowserRouter ,Route,Router, Link, Switch} from 'react-router-dom';
-import Contacto from './Contacto'
+import 'materialize-css';
+// import {BrowserRouter ,Route,Router, Link, Switch} from 'react-router-dom';
+// import Contacto from './Contacto'
 
 
 const Navbar = () => {

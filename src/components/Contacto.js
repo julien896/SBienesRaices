@@ -1,92 +1,108 @@
-﻿import React,{ useState } from 'react';
+﻿import React from 'react';
+import { Formik } from 'formik';
+import FormSchema from './FormSchema' 
 import '../App.css'
 import Navbar from './Navbar';
-import M from 'materialize-css';
+import uuid from 'uuid/v4'
 
 
+const Contacto = () => (
 
-const Contacto = () => {
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    M.Modal.init(elems, {dismissible: false});
-   
- });
-      const [btnDisabled, setBtnDisabled] = useState(true);
-const [data,setData] = useState({
-email : null,
-nombre :null,
-textarea : null
-});
-//const onChange = e => {
-//setData({[e.target.name]: e.target.value})
-//e.preventDefault();
-//};
-const { nombre, email, textarea } = data;
+<>
 
-//setBtnDisabled = nombre.length < 1 && email.length < 1 && textarea.length < 1;
+<Navbar/>
 
-    return ( 
-       <>
-       <Navbar/>
-<div className="fon">
-       <div class="row">
-              <form class="col s12"  >
-                     <div class="row">
-                            <div id="d1" className="input-field col s8">
-                            <input placeholder="" name="name" id="first_name" value={nombre} type="text"  class="validate" color="white" minLength='3' required onChange={(nombre) => setBtnDisabled(!nombre.length < 3)} autocomplete='off' />
-                            <label for="first_name">Nombre</label>
-		<span class="helper-text" data-error="Ingrese su nombre por favor" data-success=" "></span>
-                            </div>
-                            <div id="d2" className="input-field col s6 ">
-                            <input name="email" id="email" type="email" value={email} class="validate" color="white" auto-complete="off"  required onChange={(email) => setBtnDisabled(!email.target.value  )} autocomplete='off'/>
-                            <label for="email">Email</label>
-                            <span class="helper-text" data-error="Ingrese un mail valido" data-success=""></span>
-                            </div>
-                            <div id="d3" className="input-field col s12">
-                            <textarea name="textarea" id="textarea1" class="materialize-textarea" value={textarea} color="white" required></textarea>
-                            <label for="textarea1">Escriba su consulta</label>
-                           
-                            </div>
-		<button id = "d4" data-target="modal1" class="btn modal-trigger col s2" type="submit" name="action" disabled={btnDisabled}>Enviar
-			</button>
-                            
+ <Formik 
+      initialValues={{ nombre: '', email: '', textarea: '' }}
+      validationSchema={FormSchema}
+      onSubmit={(values, { setSubmitting }) => {
+        setTimeout(() => {
+          values.id=uuid();
+          {console.log(values)}
+           alert(`${values.nombre}, gracias por comunicarte. Nos contactaremos a la brevedad`)
+          setSubmitting(false);
+        }, 1000);
+      }}
+    >{({
+      values,
+      errors,
+      touched,
+      handleChange,
+      handleBlur,
+      handleSubmit,
+      isSubmitting
+    }) => (
+      <div className="fon">
+      <div class="row">
+      <form class="col s12" onSubmit={handleSubmit}>
+        <div id="d1" className="input-field col s8">
+          <input
+            type="text"
+            id="first_name"
+            name="nombre"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.nombre}
+            class="validate" 
+            color="white"
+          />
+          <label htmlFor="first_name">Nombre</label>
+        <span class="helper-text" data-error="Ingrese su nombre por favor" data-success=" "></span>
+            {errors.nombre && touched.nombre && errors.nombre}
+        </div>
+        <div id="d2" className="input-field col s6 ">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.email}
+            class="validate" 
+            color="white" 
+            auto-complete="off"
+          />
+          <label htmlFor="email">Email</label>
+          <span class="helper-text" data-error="Ingrese un mail valido" data-success=""></span>
+          {errors.email && touched.email && errors.email}
+        </div>
+        <div id="d3" className="input-field col s12">
+          <textarea
+            type="textarea"
+            name="textarea"
+            id="textarea1" 
+            class="materialize-textarea" 
+            color="white"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={values.textarea}
+          ></textarea>
+            <label htmlFor="textarea">Escriba su consulta</label>
+          {errors.textarea && touched.textarea && errors.textarea}
+        </div>
+        <button type="submit" name="action" id = "d4" 
+         class="btn modal-trigger col s2" data-target="modal1"
+         disabled={isSubmitting}>
+          {isSubmitting ? 'Enviando' : 'Enviar'}
+        </button>
+        
+        
 
-  
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4 id="m1">Muchas gracias por comunicarse.</h4><p id="m2"> Su consulta ha sido enviada correctamente. Lo contactaremos a la brevedad</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
-    </div>
-  </div>
-<div id="modal2" class="modal">
-    <div class="modal-content">
-      <h4 id="m1">error</h4><p id="m2"> Su consulta ha sido enviada correctamente. Lo contactaremos a la brevedad</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
-    </div>
-  </div>
-                            
-                     </div>
-              </form>
-               
-       </div>
-       <p className="fcontacto"> <b>Sanchez</b> <b>Hurtado</b> Bienes <b>Raices</b><br/>
-       <em> Empresa de servicios inmobiliarios y afines, le ofrecemos los siguientes servicios: Ventas – Permutas - Alquileres – Tasaciones – Remates – Informes y Gestiones
-         <hr/>Todas las medidas enunciadas son meramente orientativas, las medidas exactas serán las que se expresen en el respectivo título de propiedad de cada inmueble. 
-         Todas las fotos, imagenes y videos son meramente ilustrativos y no contractuales. Los precios enunciados son meramente orientativos y no contractuales. </em> </p>
-</div>
+       </form>
+      </div>
+      <div>
+          <p className="fcontacto"> <b>Sanchez</b> <b>Hurtado</b> Bienes <b>Raices</b><br/>
+          <em> Empresa de servicios inmobiliarios y afines, le ofrecemos los siguientes servicios: Ventas – Permutas - Alquileres – Tasaciones – Remates – Informes y Gestiones
+            <hr/>Todas las medidas enunciadas son meramente orientativas, las medidas exactas serán las que se expresen en el respectivo título de propiedad de cada inmueble. 
+            Todas las fotos, imagenes y videos son meramente ilustrativos y no contractuales. Los precios enunciados son meramente orientativos y no contractuales. </em> </p>
+      </div>
+        </div>
+          
+    )}
+  </Formik>
+  </>
+);
 
-       </>
-
-     );
-}
- 
 export default Contacto;
 
 
-//
-  //                         <a id = "d4"class="waves-effect waves-light btn modal-trigger col s2" href="#modal1">Enviar</a>
-    //                        
